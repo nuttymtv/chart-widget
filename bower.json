@@ -1,0 +1,19 @@
+{
+  "name": "thesisa",
+  "version": "0.0.0",
+  "authors": [
+    "Nattapon Rangsiyakul"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0.0",
+    "google-chart": "GoogleWebComponents/google-chart#~1.0.2"
+  }
+}

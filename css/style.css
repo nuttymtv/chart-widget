@@ -1,0 +1,162 @@
+html,body {
+  height: 100%;
+  margin: 0;
+  background-color: white;
+  font-family: 'RobotoDraft', sans-serif;
+}
+
+.horizontal-section {
+  width: 220px;
+  background-color : white;
+  padding : 20px;
+}
+
+div#imgName h1{
+
+  padding : 20px;
+  color: white;
+  background : #35A1Ae;
+  border-radius: 7px;
+
+}
+
+div#imgName div{
+  padding : 0px;
+
+}
+
+
+div#space div{
+  margin : 60px;
+ 
+}
+
+div#trackbar div{
+  margin : 100px;
+ 
+}
+paper-progress::shadow #activeProgress {
+  background-color: red;
+}
+paper-progress::shadow #secondaryProgress {
+  background-color: blue;
+}
+
+div div#moreinfo{
+  margin: 15px;
+  color : white;
+ 
+}
+
+div div#moreinfo paper-button{
+   background-color: #FD4081;
+}
+
+
+paper-header-panel{
+  height: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  background: white;
+}
+
+paper-toolbar#mainheader{
+  background: #4285f4;
+  color: white;
+} 
+
+paper-toolbar#menuheader{
+  background: #5123c3;
+  color: white;
+} 
+
+paper-icon#polymer{
+  color: white;
+}
+
+#my-button paper-ripple {
+  color: blue;
+}
+
+paper-button {
+  display: block;
+  margin-bottom: 24px;
+  border-radius: 10px;
+}
+
+paper-button.colorful {
+      color: #4285f4;
+}
+
+paper-button[raised].colorful {
+  background: #4285f4;
+  color: #fff;
+}
+
+#tabs {
+  width: 100%;
+  margin: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-transform: uppercase;
+}
+
+paper-drawer-panel:not([narrow]) #navicon {
+  display: none;
+}
+
+
+.normalEye{
+ position:relative;
+  right: 30px;
+  top: 30px;
+  width: 40px; 
+  height: 40px; 
+  background :  green; 
+  border-radius: 10px;
+}
+.warningEye{
+position:relative;
+  right: 30px;
+  top: 30px;
+  width: 40px; 
+  height: 40px; 
+  background :  orange; 
+  border-radius: 10px;
+}
+.dangerEye{
+  position:relative;
+  right: 30px;
+  top: 30px;
+  width: 40px; 
+  height: 40px; 
+  background :  red; 
+  border-radius: 10px; 
+}
+
+center{
+  border-radius: 45%;
+}
+
+/*JS Styling */
+
+.algorithm-kmean-tab:active,.algorithm-watershed-tab:active,.algorithm-graphcut-tab:active, .active {
+    background-color:#E0EAF1;
+    color: gray;
+    box-shadow: 0px 7px 12px 5px rgba(214,214,214,1);
+}
+#kmean-tab:active,#watershed-tab:active,#graphcut-tab-:active, .active-tab {
+    background-color:#6272FD;
+    color: white;
+}
+#kmean-tab,#watershed-tab,#graphcut-tab{
+    background-color:#6aaBF1;
+    color: white;
+}
+
+.title{
+  margin: 0px !important;
+}
+/*Loading progressbar*/

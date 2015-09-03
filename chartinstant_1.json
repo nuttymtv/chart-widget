@@ -1,0 +1,36 @@
+{
+  "_type":"Resource",
+  "resourcetype": "chartResourceType",
+  "chartType": "pie",
+  "options": {
+    "title": "Distribution of days in 2001Q1"
+  },
+  "size":{
+  	"height": "200px",
+  	"width": "250px"
+  },
+  "cols": [
+    {
+      "label": "Month",
+      "type": "string"
+    },
+    {
+      "label": "Days",
+      "type": "number"
+    }
+  ],
+  "rows": [
+    [
+      "Jan",
+      31
+    ],
+    [
+      "Feb",
+      28
+    ],
+    [
+      "Mar",
+      31
+    ]
+  ]
+}

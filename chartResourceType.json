@@ -1,0 +1,145 @@
+{
+  "_type": "ResourceType",
+  "name": "chartResourceType",
+  "schema": {
+    "properties": {
+      "type": "object",
+      "properties": {
+        "chartType": {
+          "type": "string"
+        },
+        "options": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "hAxis": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                }
+              }
+            },
+            "vAxis": {
+              "id": "vAxis",
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "minValue": {
+                  "type": "integer"
+                },
+                "maxValue": {
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        },
+        "size": {
+          "type": "object",
+          "properties": {
+            "height": {
+              "type": "string"
+            },
+            "width": {
+              "type": "string"
+            }
+          }
+        },
+        "cols": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "value": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "label": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string"
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "label": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "rows": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "id": "type",
+              "type": "string"
+            },
+            "value": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "integer"
+                    }
+                  ]
+                },
+                {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "integer"
+                    }
+                  ]
+                },
+                {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "integer"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      "required": [
+        "chartType",
+        "options",
+        "size",
+        "cols",
+        "rows"
+      ]
+    }
+  }
+}

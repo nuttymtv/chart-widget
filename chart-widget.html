@@ -1,0 +1,122 @@
+<dom-module id="chart-widget">
+  <style>
+    :host {
+      display: inline-block;
+      width: auto;
+      height: auto;
+    }
+
+  paper-header-panel {
+      float: none;
+     width: 270px ;
+      height: 270px;
+      margin: 12px;
+
+      @apply(--shadow-elevation-2dp);
+    }
+
+    .paper-header {
+      width: auto;
+      height: 60px;
+      font-size: 25px;
+      line-height: 60px;
+      padding: 0 10px;
+      color: white;
+      transition: height 0.2s;
+    }
+
+    .colorType .paper-header {
+        background-color: #12aabc;
+    }
+
+    google-chart {
+      margin : 5px 20px 0px 20px;
+    }
+
+  </style>
+  <template>
+    <div class="layout wrap inline center-center">
+      <paper-header-panel class="colorType">
+        <div class="paper-header">{{type}}</div>
+        <div>
+          <google-chart
+          type= '{{type}}'
+          options='{{options}}'
+          cols='{{cols}}'
+          rows='{{rows}}'
+          style$='{{sizeOfChart(height,width)}}'>
+          </google-chart>
+        </div>
+      </paper-header-panel>
+    
+      <iron-ajax
+        auto
+        url="http://johnsd.cse.unsw.edu.au:3000/"
+        params$='{{queryChart(id)}}'
+        handle-as="json"
+        on-response="handleResponse"
+        last-response = {{dataResponse}}></iron-ajax>
+
+  </template>
+</dom-module>
+<script>
+(function() {
+ newChart = Polymer({
+    is: 'chart-widget',
+
+    properties: {
+        type: {
+          type: String
+        },
+        options: {
+          type: Object
+        },
+        cols: {
+          type: Object
+        }, 
+        rows: {
+          type: Object 
+        },
+        height: {
+          type: String
+        },
+        width: {
+          type: String
+        },
+        id: {
+          type: String
+          }
+
+    },
+
+
+    handleResponse : function (data){
+      var jsontext = data.detail.response.data;
+      var contact = JSON.parse(jsontext);
+      this.type = contact.chartType;
+      this.options = contact.options;
+      this.cols = contact.cols;
+      this.rows = contact.rows;
+      this.height = contact.size.height;
+      this.width = contact.size.width;
+
+    },
+
+    sizeOfChart: function(height , width){
+      return "height: " + height  + ";" +
+              "width: " + width + ";" ; 
+      
+    },
+
+    queryChart: function(id){
+      return '{"' +  'id' +'":' +'"'+id+'"}'; 
+    }
+
+  });
+})();
+
+
+
+</script>
+
+
