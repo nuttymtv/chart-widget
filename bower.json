@@ -1,5 +1,5 @@
 {
-  "name": "thesisa",
+  "name": "chart-widget",
   "version": "0.0.0",
   "authors": [
     "Nattapon Rangsiyakul"
@@ -13,7 +13,9 @@
     "tests"
   ],
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.0.0",
-    "google-chart": "GoogleWebComponents/google-chart#~1.0.2"
+    "google-chart": "GoogleWebComponents/google-chart#~1.0.2",
+    "iron-ajax": "PolymerElements/iron-ajax#~1.0.4",
+    "paper-header-panel": "PolymerElements/paper-header-panel#~1.0.5",
+    "polymer": "Polymer/polymer#^1.0.0"
   }
 }
